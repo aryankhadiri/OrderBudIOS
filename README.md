@@ -65,3 +65,5 @@ Provide information about the food of restaurants, so customers can order base o
  * Log in -> Account creation if no log in is available or continue using the app without log-in
  * search bar and list of restaurant -> Dish option -> dish’s information -> give a review and share ( only apply for registered user)
  * Profile -> Text field to be modified
+## Wireframes
+<img src="https://i.imgur.com/5xj6erJ.png" width=800><br>
