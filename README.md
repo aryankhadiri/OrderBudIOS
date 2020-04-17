@@ -13,7 +13,6 @@ Group Project - Group 2
 ### Description
 Provide information about the food of restaurants, so customers can order base of the ingredient, photos, reviews, and suggestions. Therefore, this app is to help customer to decide what that want to order.  This app is also can be used as a mobile menu. 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:**: Utilities
 - **Mobile:** This app would be primarily developed for ios mobile  devices but would perhaps be just as viable on a computer, such as yelp or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
 - **Story:** Provide user the dish’s information before they order. User also can give a review and suggestions of the dish. 
