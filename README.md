@@ -29,9 +29,9 @@ Provide information about the food of restaurants, so customers can order base o
 
 * User look up the dish of restaurant
 * User pick what they want to order and read the information about the order
-*User log in to give the review and feedback of the food
-*User can share the food with friends
-*Profile page for each user
+* User log in to give the review and feedback of the food
+* User can share the food with friends
+* Profile page for each user
 
 **Optional Nice-to-have Stories**
 
@@ -40,17 +40,17 @@ Provide information about the food of restaurants, so customers can order base o
 ### 2. Screen Archetypes
 
 * login
-   *customer can use this app without log in if they just want to look at the food, and want to know general information about the food such as review, dish’s picture, and tastes
+   * Customer can use this app without log in if they just want to look at the food, and want to know general information about the food such as review, dish’s picture, and tastes
 * Register 
    * As a registered user, he/she can give the review, feedback and share to other social app
 * Profile screen
-   *User can upload avatar, and edit profile information
+   * User can upload avatar, and edit profile information
 * Main Selection Screen
    * There is a seach bar on the top on the ap screen which allows user to search the name of restaurant. Below the search bar, the similar or exact name of restaurant will show up
 * Menu Screen
-   *All the dishes of the restaurant that the customer selected
+   * All the dishes of the restaurant that the customer selected
 * Dish Screen
-   *All the dish’s information will show up: level of sweet, spicy, salty, photos, reviews, etc…
+   * All the dish’s information will show up: level of sweet, spicy, salty, photos, reviews, etc…
 
 
 ### 3. Navigation
