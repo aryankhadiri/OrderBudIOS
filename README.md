@@ -43,13 +43,13 @@ Provide information about the food of restaurants, so customers can order base o
    *customer can use this app without log in if they just want to look at the food, and want to know general information about the food such as review, dish’s picture, and tastes
 * Register 
    * As a registered user, he/she can give the review, feedback and share to other social app
-*Profile screen
+* Profile screen
    *User can upload avatar, and edit profile information
-*Main Selection Screen
+* Main Selection Screen
    * There is a seach bar on the top on the ap screen which allows user to search the name of restaurant. Below the search bar, the similar or exact name of restaurant will show up
-*Menu Screen
+* Menu Screen
    *All the dishes of the restaurant that the customer selected
-*Dish Screen
+* Dish Screen
    *All the dish’s information will show up: level of sweet, spicy, salty, photos, reviews, etc…
 
 
@@ -59,10 +59,10 @@ Provide information about the food of restaurants, so customers can order base o
 
 * Restaurant selection
 * Profile
-*Food Selection
+* Food Selection
 
 **Flow Navigation** (Screen to Screen)
 
- * Log in - Account creation if no log in is available or continue using the app without log-in
- * search bar and list of restaurant -> Dish option  dish’s information -> give a review and share ( only apply for registered user)
- *Profile -> Text field to be modified
+ * Log in -> Account creation if no log in is available or continue using the app without log-in
+ * search bar and list of restaurant -> Dish option -> dish’s information -> give a review and share ( only apply for registered user)
+ * Profile -> Text field to be modified
