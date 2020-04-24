@@ -78,7 +78,24 @@ Provide information about the food of restaurants, so customers can order base o
    | Name          | String   | unique id for the user post (default field) |
    | Location      | String   | Location of the restaurant, "City, State" |
    | Address       | File     | image that user posts |
-   | Menu__id(Foreign Key)|Integer| The key to the menu object|
+   | operating hours | String | Operating Hours
+   
+   
+#### Food
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | id            | Integer  | unique id for the restaurant |
+   | Name          | String   | unique id for the user post (default field) |
+   | Vegan         | Bool     | True for vegan and False for not vegen
+   | salty_rate    | Integer  | Rating for how salty the food is out of 10
+   | sweet_rate    | Integer  | Rating for how sweet the food is out of 10
+   | juicy_rate    | Integer  | Rating for how juicy the food is out of 10
+   | spicy_rate    | Integer  | Rating for how salty the food is out of 10
+   | rate          | Integer  | Overal Rate out of 5 starts
+   | image         | Image    | The image of the food. (Could become a list of images)
+   | Restaruant    | Foreign Key | The Foreign Key which links the food to the restaurant
+   
+
 ### Networking
+  * Still exploring APIs where to get the menu details from. Data will be soon available. 
 #### List of network requests by screen
-   - Home Feed Screen
