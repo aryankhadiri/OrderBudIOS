@@ -67,3 +67,18 @@ Provide information about the food of restaurants, so customers can order base o
  * Profile -> Text field to be modified
 ## Wireframes
 <img src="https://i.imgur.com/5xj6erJ.png" width=800><br>
+
+## Schema 
+### Models
+#### Restaurant
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | id            | Integer  | unique id for the restaurant |
+   | Name          | String   | unique id for the user post (default field) |
+   | Location      | String   | Location of the restaurant, "City, State" |
+   | Address       | File     | image that user posts |
+   | Menu__id(Foreign Key)|Integer| The key to the menu object|
+### Networking
+#### List of network requests by screen
+   - Home Feed Screen
