@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
    
+    //This is fake Restaurant data 
     let RestaurantNameArr = [ "NoodleA", "NoodleB","NoodleC","Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegowina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad"]
     var searchedRestaurant = [String]()
     var searching = false
