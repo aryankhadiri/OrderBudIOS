@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class ViewController: UIViewController {
    
     //This is fake Restaurant data 
@@ -31,7 +31,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if searching {
             return searchedRestaurant.count
         } else {
-            return RestaurantNameArr.count
+            return 0
         }
     }
     

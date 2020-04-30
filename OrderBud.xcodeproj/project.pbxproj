@@ -15,6 +15,9 @@
 		05D2D10A2448F1990013273A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D2D1082448F1990013273A /* LaunchScreen.storyboard */; };
 		05D2D1152448F1990013273A /* OrderBudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D1142448F1990013273A /* OrderBudTests.swift */; };
 		05D2D1202448F1990013273A /* OrderBudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D11F2448F1990013273A /* OrderBudUITests.swift */; };
+		7AB24252B42F6F219511FE60 /* Pods_OrderBud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA4B5D90574B2FA7CFF4B6F /* Pods_OrderBud.framework */; };
+		898E9622636FB5ABDE47DF6C /* Pods_OrderBud_OrderBudUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E981B01487EEAE2B0731A5A3 /* Pods_OrderBud_OrderBudUITests.framework */; };
+		F3B73777103CA73BE6B62B0F /* Pods_OrderBudTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F1735D3DAD6860D2175AA6 /* Pods_OrderBudTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		05D2D11B2448F1990013273A /* OrderBudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderBudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D2D11F2448F1990013273A /* OrderBudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBudUITests.swift; sourceTree = "<group>"; };
 		05D2D1212448F1990013273A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AF3DF666EC79E826AB4762B /* Pods-OrderBud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBud.release.xcconfig"; path = "Target Support Files/Pods-OrderBud/Pods-OrderBud.release.xcconfig"; sourceTree = "<group>"; };
+		285C3B1B2487272EF6975E77 /* Pods-OrderBud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBud.debug.xcconfig"; path = "Target Support Files/Pods-OrderBud/Pods-OrderBud.debug.xcconfig"; sourceTree = "<group>"; };
+		44EE646C2C1093DEC3387499 /* Pods-OrderBudTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBudTests.debug.xcconfig"; path = "Target Support Files/Pods-OrderBudTests/Pods-OrderBudTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DA4B5D90574B2FA7CFF4B6F /* Pods_OrderBud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderBud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F80EFA35D13E4ADF855D39E /* Pods-OrderBudTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBudTests.release.xcconfig"; path = "Target Support Files/Pods-OrderBudTests/Pods-OrderBudTests.release.xcconfig"; sourceTree = "<group>"; };
+		59F1735D3DAD6860D2175AA6 /* Pods_OrderBudTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderBudTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96931B09AA0617802B56D0D /* Pods-OrderBud-OrderBudUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBud-OrderBudUITests.release.xcconfig"; path = "Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E981B01487EEAE2B0731A5A3 /* Pods_OrderBud_OrderBudUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderBud_OrderBudUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1A3C260BEA3928617FF808 /* Pods-OrderBud-OrderBudUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBud-OrderBudUITests.debug.xcconfig"; path = "Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB24252B42F6F219511FE60 /* Pods_OrderBud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B73777103CA73BE6B62B0F /* Pods_OrderBudTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898E9622636FB5ABDE47DF6C /* Pods_OrderBud_OrderBudUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				05D2D1132448F1990013273A /* OrderBudTests */,
 				05D2D11E2448F1990013273A /* OrderBudUITests */,
 				05D2D0FB2448F1980013273A /* Products */,
+				789EF27C1EE1C7A722B88159 /* Pods */,
+				0EFFED9A25B782F087BEE594 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,30 @@
 			path = OrderBudUITests;
 			sourceTree = "<group>";
 		};
+		0EFFED9A25B782F087BEE594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DA4B5D90574B2FA7CFF4B6F /* Pods_OrderBud.framework */,
+				E981B01487EEAE2B0731A5A3 /* Pods_OrderBud_OrderBudUITests.framework */,
+				59F1735D3DAD6860D2175AA6 /* Pods_OrderBudTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		789EF27C1EE1C7A722B88159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				285C3B1B2487272EF6975E77 /* Pods-OrderBud.debug.xcconfig */,
+				1AF3DF666EC79E826AB4762B /* Pods-OrderBud.release.xcconfig */,
+				EA1A3C260BEA3928617FF808 /* Pods-OrderBud-OrderBudUITests.debug.xcconfig */,
+				D96931B09AA0617802B56D0D /* Pods-OrderBud-OrderBudUITests.release.xcconfig */,
+				44EE646C2C1093DEC3387499 /* Pods-OrderBudTests.debug.xcconfig */,
+				4F80EFA35D13E4ADF855D39E /* Pods-OrderBudTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05D2D1242448F1990013273A /* Build configuration list for PBXNativeTarget "OrderBud" */;
 			buildPhases = (
+				9AE381898C5FB8A4CC658AE6 /* [CP] Check Pods Manifest.lock */,
 				05D2D0F62448F1980013273A /* Sources */,
 				05D2D0F72448F1980013273A /* Frameworks */,
 				05D2D0F82448F1980013273A /* Resources */,
+				C9853766FEBB4F8470DE1C4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05D2D1272448F1990013273A /* Build configuration list for PBXNativeTarget "OrderBudTests" */;
 			buildPhases = (
+				D65D8D2F160FF5A2BF725107 /* [CP] Check Pods Manifest.lock */,
 				05D2D10C2448F1990013273A /* Sources */,
 				05D2D10D2448F1990013273A /* Frameworks */,
 				05D2D10E2448F1990013273A /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05D2D12A2448F1990013273A /* Build configuration list for PBXNativeTarget "OrderBudUITests" */;
 			buildPhases = (
+				138AF127B5F6209518E65B94 /* [CP] Check Pods Manifest.lock */,
 				05D2D1172448F1990013273A /* Sources */,
 				05D2D1182448F1990013273A /* Frameworks */,
 				05D2D1192448F1990013273A /* Resources */,
+				DEFB8C7E124A1D985BAC7668 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		138AF127B5F6209518E65B94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrderBud-OrderBudUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE381898C5FB8A4CC658AE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrderBud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9853766FEBB4F8470DE1C4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrderBud/Pods-OrderBud-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrderBud/Pods-OrderBud-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrderBud/Pods-OrderBud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D65D8D2F160FF5A2BF725107 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrderBudTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEFB8C7E124A1D985BAC7668 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05D2D0F62448F1980013273A /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		05D2D1252448F1990013273A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 285C3B1B2487272EF6975E77 /* Pods-OrderBud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +600,7 @@
 		};
 		05D2D1262448F1990013273A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF3DF666EC79E826AB4762B /* Pods-OrderBud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +619,7 @@
 		};
 		05D2D1282448F1990013273A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44EE646C2C1093DEC3387499 /* Pods-OrderBudTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		05D2D1292448F1990013273A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F80EFA35D13E4ADF855D39E /* Pods-OrderBudTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +665,7 @@
 		};
 		05D2D12B2448F1990013273A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1A3C260BEA3928617FF808 /* Pods-OrderBud-OrderBudUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +686,7 @@
 		};
 		05D2D12C2448F1990013273A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D96931B09AA0617802B56D0D /* Pods-OrderBud-OrderBudUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

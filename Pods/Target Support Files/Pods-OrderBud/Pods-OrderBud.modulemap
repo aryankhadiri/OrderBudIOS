@@ -1,0 +1,6 @@
+framework module Pods_OrderBud {
+  umbrella header "Pods-OrderBud-umbrella.h"
+
+  export *
+  module * { export * }
+}
