@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05892E48245D598A00411B87 /* searchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05892E47245D598A00411B87 /* searchTableViewCell.swift */; };
 		05D2D0FE2448F1980013273A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D0FD2448F1980013273A /* AppDelegate.swift */; };
 		05D2D1002448F1980013273A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D0FF2448F1980013273A /* SceneDelegate.swift */; };
 		05D2D1022448F1980013273A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D1012448F1980013273A /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05892E47245D598A00411B87 /* searchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTableViewCell.swift; sourceTree = "<group>"; };
 		05D2D0FA2448F1980013273A /* OrderBud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderBud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D2D0FD2448F1980013273A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D2D0FF2448F1980013273A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				05D2D0FD2448F1980013273A /* AppDelegate.swift */,
 				05D2D0FF2448F1980013273A /* SceneDelegate.swift */,
+				05892E47245D598A00411B87 /* searchTableViewCell.swift */,
 				05D2D1012448F1980013273A /* ViewController.swift */,
 				05D2D1032448F1980013273A /* Main.storyboard */,
 				05D2D1062448F1990013273A /* Assets.xcassets */,
@@ -165,7 +168,6 @@
 				44EE646C2C1093DEC3387499 /* Pods-OrderBudTests.debug.xcconfig */,
 				4F80EFA35D13E4ADF855D39E /* Pods-OrderBudTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D2D1022448F1980013273A /* ViewController.swift in Sources */,
+				05892E48245D598A00411B87 /* searchTableViewCell.swift in Sources */,
 				05D2D0FE2448F1980013273A /* AppDelegate.swift in Sources */,
 				05D2D1002448F1980013273A /* SceneDelegate.swift in Sources */,
 			);

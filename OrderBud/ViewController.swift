@@ -36,13 +36,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! searchTableViewCell
         if searching {
-            cell?.textLabel?.text = searchedRestaurant[indexPath.row]
+            cell.nameLabel.text = searchedRestaurant[indexPath.row]
+            cell.cityLabel.text = "San Jose"
+            cell.stateLabel.text = "CA"
+            //cell?.textLabel?.text = searchedRestaurant[indexPath.row]
         } else {
-            cell?.textLabel?.text = RestaurantNameArr[indexPath.row]
+            cell.nameLabel.text = RestaurantNameArr[indexPath.row]
+            cell.cityLabel.text = "San Jose"
+            cell.stateLabel.text = "CA"
+            //cell?.textLabel?.text = RestaurantNameArr[indexPath.row]
         }
-        return cell!
+        return cell
     }
 }
         
