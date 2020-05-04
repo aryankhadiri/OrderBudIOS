@@ -12,8 +12,9 @@ class ViewController: UIViewController {
     
     
     var restaurants = [PFObject]()
+    var foods = [PFObject]()
     //var restaurantsNames:[String] = []
-    var restaurantsDict:[String:[String]]=[:]
+    var infoDict:[String:[Any]]=[:]
     
     
        func takingQuery(){
@@ -28,9 +29,25 @@ class ViewController: UIViewController {
                     let name = restaurant["Name"] as! String
                     let city = restaurant["city"] as! String
                     let state = restaurant["state"] as! String
-                    self.restaurantsDict[name] = [city,state]
-                    //print(restaurant["Name"]!)
-                    //self.restaurantsNames.append(name)
+                    self.infoDict[name] = [city,state,"restaurant", restaurant]
+                }
+                let query1 = PFQuery(className: "Foods")
+                query1.includeKeys(["name","restaurant.Name","restaurant.city"])
+                query1.findObjectsInBackground{(foods, error) in
+                    if foods != nil{
+                        print("Foods Loaded Successfully")
+                        self.foods = foods!
+                    }
+                    for food in self.foods{
+                        let name = food["name"] as! String
+                        let restaurant = food["restaurant"] as! PFObject
+                        let restName = restaurant["Name"] as! String
+                        let restCity = restaurant["city"] as! String
+                        self.infoDict[name] = [restName, restCity, "food", food]
+                    }
+                    print(self.infoDict)
+                    
+                    
                 }
                }
            }
@@ -69,8 +86,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.nameLabel.text = searchedRestaurant[indexPath.row]
             //cell.nameLabel.text = restaurants[indexPath.row]["Name"] as! String
             
-            cell.cityLabel.text = restaurantsDict[searchedRestaurant[indexPath.row]]?[0]
-            cell.stateLabel.text = restaurantsDict[searchedRestaurant[indexPath.row]]?[1]
+            cell.cityLabel.text = infoDict[searchedRestaurant[indexPath.row]]?[0] as! String
+            cell.stateLabel.text = infoDict[searchedRestaurant[indexPath.row]]?[1] as! String
             //cell?.textLabel?.text = searchedRestaurant[indexPath.row]
         } else {
             //cell.nameLabel.text = RestaurantNameArr[indexPath.row]
@@ -80,13 +97,46 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let itemName = searchedRestaurant[indexPath.row]
+        if infoDict[itemName]![2] as! String == "food"{
+            self.performSegue(withIdentifier: "showDetailsFoodSegue", sender: self)
+        }
+        else{
+            self.performSegue(withIdentifier: "showDetailsRestaurantSegue", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        //let cell = sender as! UITableViewCell
+        //let indexPath = tbView.indexPath(for: cell)
+        let viewController = sender as! UIViewController
+        let cell = viewController.view.viewWithTag(1) as! UITableViewCell
+        let indexPath = tbView.indexPath(for: cell)
+        let itemName = searchedRestaurant[indexPath!.row]
+        
+        
+        if segue.identifier == "showDetailsFoodSegue" {
+            let dest = segue.destination as! foodDetailsViewController
+            let food = infoDict[itemName]![3]
+            dest.food = food as! PFObject
+        }
+        else if segue.identifier == "showDetailsRestaurantSegue" {
+            let dest = segue.destination as! RestaurantMenuViewController
+            let restaurant = infoDict[itemName]![3]
+            dest.restaurant = restaurant as! PFObject
+        }
+        // Pass the selected object to the new view controller.
+    }
+    
 }
         
 extension ViewController: UISearchBarDelegate {
 
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             
-            searchedRestaurant = restaurantsDict.keys.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+            searchedRestaurant = infoDict.keys.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
 
            //searchedRestaurant = RestaurantNameArr.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
             if searchText == ""{
@@ -106,6 +156,6 @@ extension ViewController: UISearchBarDelegate {
             tbView.reloadData()
         }
         
-
 }
+
 

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OrderBud" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="Qhi-iZ-XL9" customClass="searchTableViewCell" customModule="OrderBud" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="Qhi-iZ-XL9" customClass="searchTableViewCell" customModule="OrderBud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qhi-iZ-XL9" id="XyB-g5-Kdz">
@@ -66,8 +66,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mEW-b8-lhy"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cmO-0U-Uw1"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="50L-eb-cD1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Olb-AJ-89G"/>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" barStyle="blackTranslucent" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AeD-q2-cPB">
@@ -84,15 +84,98 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="bKc-Cv-CDc"/>
+                    <navigationItem key="navigationItem" title="Search" id="bKc-Cv-CDc"/>
                     <connections>
                         <outlet property="SearchBar" destination="AeD-q2-cPB" id="ThP-Xw-uBT"/>
                         <outlet property="tbView" destination="gmV-AC-4zd" id="nCO-xH-snG"/>
+                        <segue destination="vRM-bv-Mkt" kind="show" identifier="showDetailsRestaurantSegue" id="zC2-PD-7Xo"/>
+                        <segue destination="F4U-0l-IOd" kind="show" identifier="showDetailsFoodSegue" id="a8c-vS-2s6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+        </scene>
+        <!--Food Details View Controller-->
+        <scene sceneID="oam-n5-Kc2">
+            <objects>
+                <viewController id="F4U-0l-IOd" customClass="foodDetailsViewController" customModule="OrderBud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LNB-a7-SS0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="l8C-L3-oi8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gr3-DD-pxA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHr-Q0-7bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="568"/>
+        </scene>
+        <!--Restaurant Menu View Controller-->
+        <scene sceneID="MSu-h1-ByT">
+            <objects>
+                <viewController id="vRM-bv-Mkt" customClass="RestaurantMenuViewController" customModule="OrderBud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OhY-HC-HDR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-3L-cYG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="100" id="3YZ-KP-Cyz" customClass="FoodCellTableViewCell" customModule="OrderBud" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3YZ-KP-Cyz" id="Gft-ba-a8c">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-8T-x0y">
+                                                    <rect key="frame" x="8" y="8" width="90" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="QwE-AR-SpQ"/>
+                                                        <constraint firstAttribute="height" constant="84" id="gVp-Bm-BY8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="918-Q3-xDy">
+                                                    <rect key="frame" x="106" y="19" width="296" height="62"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="918-Q3-xDy" secondAttribute="bottom" constant="8" id="Pju-PF-MzJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="NtC-8T-x0y" secondAttribute="bottom" constant="8" id="bWJ-wH-jr5"/>
+                                                <constraint firstItem="NtC-8T-x0y" firstAttribute="leading" secondItem="Gft-ba-a8c" secondAttribute="leading" constant="8" id="bsI-Go-j4q"/>
+                                                <constraint firstItem="918-Q3-xDy" firstAttribute="trailing" secondItem="Gft-ba-a8c" secondAttribute="trailingMargin" constant="8" id="jH2-dA-W0f"/>
+                                                <constraint firstItem="NtC-8T-x0y" firstAttribute="top" secondItem="Gft-ba-a8c" secondAttribute="top" constant="8" id="rgo-jT-PVA"/>
+                                                <constraint firstItem="918-Q3-xDy" firstAttribute="top" secondItem="Gft-ba-a8c" secondAttribute="topMargin" constant="8" id="v84-qb-WLI"/>
+                                                <constraint firstItem="918-Q3-xDy" firstAttribute="leading" secondItem="NtC-8T-x0y" secondAttribute="trailing" constant="8" id="x9F-1F-DAc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodImageView" destination="NtC-8T-x0y" id="I86-cu-C8u"/>
+                                            <outlet property="foodNameLabel" destination="918-Q3-xDy" id="of7-P8-Eog"/>
+                                            <segue destination="F4U-0l-IOd" kind="show" id="q2x-Ro-ecf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jbe-OL-TZk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2kB-4W-xzm"/>
+                    <connections>
+                        <outlet property="tableView" destination="nhN-3L-cYG" id="OuQ-l7-4KO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cc1-am-Eqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931.8840579710147" y="-210.26785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PeU-Go-w5K">
@@ -117,4 +200,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="q2x-Ro-ecf"/>
+    </inferredMetricsTieBreakers>
 </document>
