@@ -24,9 +24,12 @@ class foodDetailsViewController: UIViewController {
     
     @IBOutlet weak var juicy: UISlider!
     
+    @IBOutlet weak var ratingSlider: UISlider!
     
-    @IBOutlet weak var review: UITextField!
+    @IBOutlet weak var reviewField: UITextField!
     
+    @IBOutlet weak var overalRating: UILabel!
+    @IBOutlet weak var ratingValueLabel: UILabel!
     @IBOutlet weak var ratingControl: RatingControl!
     
     var food: PFObject!
@@ -43,18 +46,55 @@ class foodDetailsViewController: UIViewController {
         let urlString = imageFile.url!
         let url = URL(string:urlString)!
         let data = try? Data(contentsOf: url)
-        FoodImage.image = UIImage(data: data!)}
+        FoodImage.image = UIImage(data: data!)
+        setValue()
+        
+    }
+        
+    @IBAction func onSubmit(_ sender: Any) {
+        let reviewText = reviewField.text
+        let review = PFObject(className: "Reviews")
+        review["text"] = reviewText
+        let floatMultipicant = ratingSlider.value as! Float / 0.5
+        let floatValue = floatMultipicant*0.5
+        review["Rating"] = floatValue
+        review["food"] = food
+        var total_ratings = food["total_ratings"] as! Int
+        total_ratings += 1
+        food["total_ratings"] = total_ratings
+        var overalRating = food["overalRating"] as! Float
+        let newRating = (overalRating + floatValue) / Float(total_ratings)
+        food["overalRating"] = newRating
+        
+        
+        review.saveInBackground { (success, error) in
+            if success{
+                print("Review Saved")
+            }
+            else{
+                print(error)
+            }
+        }
+    }
     
-
-    func setValue(_ value: Float){
-        spicy.value = Float(food["spicy"] as! Int)
-        sweet.value = Float(food["sweet"] as! Int)
-        salted.value = Float(food["salter"] as! Int)
-        juicy.value = Float(food["juicy"] as! Int)
+    func setValue(){
+        spicy.value = Float(food["Spicy"] as! Int)
+        sweet.value = Float(food["Sweet"] as! Int)
+        salted.value = Float(food["Salty"] as! Int)
+        juicy.value = Float(food["Juicy"] as! Int)
+        let value = food["overalRating"] as! Float
+        overalRating.text = value.description
         
         
         
     }
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        let currentValue = sender.value
+        let floatMultipicant = currentValue as! Float / 0.5
+        let floatValue = floatMultipicant*0.5
+        ratingValueLabel.text = currentValue.description
+    }
+
 
     /*
     // MARK: - Navigation

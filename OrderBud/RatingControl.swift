@@ -12,7 +12,7 @@ import Parse
 class RatingControl: UIStackView {
       var food: PFObject!
     
-    
+       
     
 
     /*
