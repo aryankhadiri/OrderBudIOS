@@ -21,6 +21,7 @@
 		05D5088D245FCFA40046227C /* FoodCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D5088C245FCFA40046227C /* FoodCellTableViewCell.swift */; };
 		7AB24252B42F6F219511FE60 /* Pods_OrderBud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA4B5D90574B2FA7CFF4B6F /* Pods_OrderBud.framework */; };
 		898E9622636FB5ABDE47DF6C /* Pods_OrderBud_OrderBudUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E981B01487EEAE2B0731A5A3 /* Pods_OrderBud_OrderBudUITests.framework */; };
+		E6516AD424614AB8008629D4 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6516AD324614AB8008629D4 /* RatingControl.swift */; };
 		F3B73777103CA73BE6B62B0F /* Pods_OrderBudTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F1735D3DAD6860D2175AA6 /* Pods_OrderBudTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		4F80EFA35D13E4ADF855D39E /* Pods-OrderBudTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBudTests.release.xcconfig"; path = "Target Support Files/Pods-OrderBudTests/Pods-OrderBudTests.release.xcconfig"; sourceTree = "<group>"; };
 		59F1735D3DAD6860D2175AA6 /* Pods_OrderBudTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderBudTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96931B09AA0617802B56D0D /* Pods-OrderBud-OrderBudUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBud-OrderBudUITests.release.xcconfig"; path = "Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E6516AD324614AB8008629D4 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		E981B01487EEAE2B0731A5A3 /* Pods_OrderBud_OrderBudUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderBud_OrderBudUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1A3C260BEA3928617FF808 /* Pods-OrderBud-OrderBudUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderBud-OrderBudUITests.debug.xcconfig"; path = "Target Support Files/Pods-OrderBud-OrderBudUITests/Pods-OrderBud-OrderBudUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				05D2D0FF2448F1980013273A /* SceneDelegate.swift */,
 				053A527E245F6A93008E1D24 /* foodDetailsViewController.swift */,
 				05892E47245D598A00411B87 /* searchTableViewCell.swift */,
+				E6516AD324614AB8008629D4 /* RatingControl.swift */,
 				05D5088C245FCFA40046227C /* FoodCellTableViewCell.swift */,
 				05D2D1012448F1980013273A /* ViewController.swift */,
 				053A527C245F5A86008E1D24 /* RestaurantMenuViewController.swift */,
@@ -423,6 +426,7 @@
 				053A527D245F5A86008E1D24 /* RestaurantMenuViewController.swift in Sources */,
 				05892E48245D598A00411B87 /* searchTableViewCell.swift in Sources */,
 				05D2D0FE2448F1980013273A /* AppDelegate.swift in Sources */,
+				E6516AD424614AB8008629D4 /* RatingControl.swift in Sources */,
 				05D5088D245FCFA40046227C /* FoodCellTableViewCell.swift in Sources */,
 				05D2D1002448F1980013273A /* SceneDelegate.swift in Sources */,
 				053A527F245F6A93008E1D24 /* foodDetailsViewController.swift in Sources */,

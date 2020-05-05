@@ -1,0 +1,26 @@
+//
+//  RatingControl.swift
+//  OrderBud
+//
+//  Created by Dai Le on 5/5/20.
+//  Copyright © 2020 AryanKhadiri@gmail.com. All rights reserved.
+//
+
+import UIKit
+import Parse
+
+class RatingControl: UIStackView {
+      var food: PFObject!
+    
+    
+    
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+
+}
