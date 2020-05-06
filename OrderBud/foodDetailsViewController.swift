@@ -66,7 +66,7 @@ class foodDetailsViewController: UIViewController {
         total_ratings += 1
         food["total_ratings"] = total_ratings
         var overalRating = food["overalRating"] as! Float
-        let newRating = (overalRating + floatValue) / Float(total_ratings)
+        let newRating = roundf((overalRating + floatValue) / Float(total_ratings))
         food["overalRating"] = newRating
         
         
