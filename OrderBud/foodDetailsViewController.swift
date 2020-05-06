@@ -27,17 +27,18 @@ class foodDetailsViewController: UIViewController {
     @IBOutlet weak var ratingSlider: UISlider!
     
     @IBOutlet weak var reviewField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     
     @IBOutlet weak var overalRating: UILabel!
     @IBOutlet weak var ratingValueLabel: UILabel!
-    @IBOutlet weak var ratingControl: RatingControl!
     
     var food: PFObject!
     var Review: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(food)
+        let name = food["name"] as! String
+        self.title = name
         // Do any additional setup after loading the view.
         FoodName.text = food["name"] as? String
         Description.text = food["description"] as? String
@@ -46,6 +47,8 @@ class foodDetailsViewController: UIViewController {
         let urlString = imageFile.url!
         let url = URL(string:urlString)!
         let data = try? Data(contentsOf: url)
+        FoodImage.layer.cornerRadius = 30
+        submitButton.layer.cornerRadius = 8
         FoodImage.image = UIImage(data: data!)
         setValue()
         
