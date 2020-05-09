@@ -24,7 +24,6 @@ class ViewController: UIViewController {
                if restaurants != nil{
                    print("Restaurants Successfully Loaded")
                    self.restaurants = restaurants!
-                print(self.restaurants.count)
                 for restaurant in self.restaurants {
                     let name = restaurant["Name"] as! String
                     let city = restaurant["city"] as! String
@@ -45,7 +44,6 @@ class ViewController: UIViewController {
                         let restCity = restaurant["city"] as! String
                         self.infoDict[name] = [restName, restCity, "food", food]
                     }
-                    print(self.infoDict)
                     
                     
                 }
@@ -98,6 +96,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(searchedRestaurant)
         let itemName = searchedRestaurant[indexPath.row]
         if infoDict[itemName]![2] as! String == "food"{
             self.performSegue(withIdentifier: "showDetailsFoodSegue", sender: self)
@@ -113,7 +112,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //let indexPath = tbView.indexPath(for: cell)
         let viewController = sender as! UIViewController
         let cell = viewController.view.viewWithTag(1) as! UITableViewCell
-        let indexPath = tbView.indexPath(for: cell)
+        let indexPath = tbView.indexPathForSelectedRow
         let itemName = searchedRestaurant[indexPath!.row]
         
         
@@ -126,6 +125,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let dest = segue.destination as! RestaurantMenuViewController
             let restaurant = infoDict[itemName]![3]
             dest.restaurant = restaurant as! PFObject
+           
         }
         // Pass the selected object to the new view controller.
     }

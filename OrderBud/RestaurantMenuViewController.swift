@@ -16,6 +16,7 @@ class RestaurantMenuViewController: UIViewController, UITableViewDataSource, UIT
     var restaurant:PFObject!
     var foods = [PFObject]()
     func takingQuery(){
+        
         let query = PFQuery(className: "Foods")
         query.whereKey("restaurant", equalTo: restaurant)
         query.findObjectsInBackground { (foods, error) in
@@ -28,10 +29,11 @@ class RestaurantMenuViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        takingQuery()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        takingQuery()
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
