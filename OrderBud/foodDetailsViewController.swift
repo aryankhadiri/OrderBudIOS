@@ -62,11 +62,17 @@ class foodDetailsViewController: UIViewController {
         let floatValue = floatMultipicant*0.5
         review["Rating"] = floatValue
         review["food"] = food
-        var total_ratings = food["total_ratings"] as! Int
+        var total_ratings = food["total_ratings"] as! Float
         total_ratings += 1
         food["total_ratings"] = total_ratings
-        var overalRating = food["overalRating"] as! Float
-        let newRating = roundf((overalRating + floatValue) / Float(total_ratings))
+        let overalRating = food["overalRating"] as! Float
+        let sumRating = (total_ratings-1) * overalRating
+        let newRating = roundf((sumRating + floatValue) / Float(total_ratings))
+        print("currentRate:\(floatValue)")
+        print("overal_rating:\(overalRating)")
+        print("total_rating:\(total_ratings)")
+        print("New Rating:\(newRating)")
+        
         food["overalRating"] = newRating
         
         
