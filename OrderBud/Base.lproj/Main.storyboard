@@ -249,6 +249,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSubmit:" destination="F4U-0l-IOd" eventType="touchUpInside" id="apJ-9Q-sOd"/>
+                                    <segue destination="oIP-XW-F4y" kind="unwind" unwindAction="UnwindActionWithUnwindSegue:" id="qgV-GG-dDz"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="noY-rr-SU3">
@@ -302,6 +303,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHr-Q0-7bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oIP-XW-F4y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="567.1875"/>
         </scene>
@@ -394,7 +396,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q2x-Ro-ecf"/>
+        <segue reference="a8c-vS-2s6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="yellow star" width="350" height="350"/>
